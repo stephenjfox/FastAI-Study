@@ -42,3 +42,18 @@ May have found my solution...
 + Includes links to the next lesson
 - Not sure how it connects with the notebook labeled as [`lesson 2`](https://github.com/fastai/fastai/tree/master/courses/dl1)
   - Or why that's different from the [_courses_ project](https://github.com/fastai/courses/tree/master/deeplearning1/nbs)
+
+
+[2018년 12월 14일]
+
+[오전 11시 51분]
+
+Reading more *__carefully__*, the [Deep Learning for Coders Wiki Root](https://forums.fast.ai/t/part-1-faq/10330) clarifies that:
+* The [courses repo](https://github.com/fastai/courses/tree/master/deeplearning1) has __older__ resources
+  + Instead, you should be looking in the `courses` folder of the `fastai` project.
+  * As I progress through the course, I'll have to vet the legitimacy of this claim
+* PyTorch is what you should use to model research-driven experimentation
+  + Don't hold back on the infrastructure technologies, if you have 'em
+  + But _aim_ then _shoot_
+    * Being a Research Scientist is different from a Research Engineer which is different from a Engineer
+
