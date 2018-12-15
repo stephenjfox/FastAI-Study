@@ -57,3 +57,68 @@ Reading more *__carefully__*, the [Deep Learning for Coders Wiki Root](https://f
   + But _aim_ then _shoot_
     * Being a Research Scientist is different from a Research Engineer which is different from a Engineer
 
+
+---
+
+[오전 11시 45분]
+
+In order to maximize my learning and not waste time with (potentially unnecessary)
+  data setup, machine configuration, and more, I'm going to write down __what__
+  I know, then compare with what Jeremy teaches in these lessons.
+* It's taken me a little too long to get through the first and second video
+  - I'm relearning, not learning for the first time, so I don't need as much
+    explanation as some
+  + But I'm not fluent as I used to be: not thinking, talking, and explaining
+    regularly has caused a bit of a "drive-up" of my vocabulary and knowledge
+* Thankfully, lots of things are being reactivated, which I will now hope to
+  articulate
+
+
+Convolutional Neural Networks
+* I don't remember *exactly* where the name comes from, but I recall that the
+  mathematical clustering of function application (as CNNs do with kernels) is
+  relevant
+* Are best done as *very* __deep__ models, hundreds of modules that are 12 dozens
+  of layers each, of hundreds of nodes (for things like Inception-V4)
+  * [NOTE]: read the Inception-V4/Inception-ResNet paper from 2016
+* Manifest the idea of weight-sharing and clusters of nodes (typically in square shapes [e.g. 4x4 pixels all going to one chunk of neurons])
+  + Why? Because the a group of neurons activating for the same thing is more
+    powerful and efficient than a single neuron firing/activating
+  + These groups are responsible for identifying one aspect of the image
+    * Lines
+      * Edges
+      * Curves
+    * Gradients
+      * Color
+      * Hue
+    - These aspects are not programmed manually, but with more "layers"/modules
+      two things happen:
+      + __Modules closer__ to the image-as-raw-pixels acquire more basic things,
+        some of which seem so basic that humans can have a hard time articulating
+        the distinction between on set of activations and another
+      + __Modules further__ away (and thus closer to the output) learn reasoning
+        about higher and higher level abstractions
+        * What is initially just "shape detection" turns into "tabby vs maine coon"
+* Depth also helps fulfill the universal approximation theorem:
+  + Each module of depth can improve "power" (efficiency and/or abstraction capacity)
+    *exponentially*
+    * some variable `x` raised to the input size `n`
+  - Broadening, or widening, your layers can only improve power polynomially
+    * some input size `n` raised to a variable `x`
+* Performing image Classification
+  * by utilizing the `softmax` function (which produces a probability distribution
+    for some `m` number of classes), rather than an `argmax` (which produces a
+    one-hot vector for the same `m` number of classes), we can observe what the
+    network _thinks_ a given image ought to be.
+  + [NOTE]: Residual Networks (ResNets) have done excellently in recent years
+    on this task. Why? What makes them different?
+* Performing Object Detection:
+  - I don't know much here according to what the field is doing, but I have some
+    ideas to how it is done:
+  + If you are able to isolate which neurons fire in a specific kernel, for a
+    subset of the image-pixels input, you would be able to say "that section is
+    a \_\_\_\_"
+  + How generally, if a dumb AI had to answer the question "is there a bird in
+    this picture", it would just return `if bird detection pixels EVER fired`
+  + I've only read one paper on fast object detection, and only recently has my
+    interest in it been piqued.
