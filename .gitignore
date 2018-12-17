@@ -1,0 +1,10 @@
+.DS_Store
+.ipynb_checkpoints/**/**
+*.ipynb_checkpoints/
+*.gz
+*.pickle
+*.pkl
+*.zip
+**/**/__pycache__/**/**
+cifar-*
+week_02/intro-to-tflearn/mnist/
