@@ -122,3 +122,79 @@ Convolutional Neural Networks
     this picture", it would just return `if bird detection pixels EVER fired`
   + I've only read one paper on fast object detection, and only recently has my
     interest in it been piqued.
+
+---
+
+TODO: Lookup "Jupyter notebook extensions" or something like it
+* Jeremy Howard has collapsible `H1`-tags in my markdown notes, as does Google Colab.
+* I would really like that kind of usability in my notebook
+
+
+[오후 12시 54분]
+
+[Jupy Ext Medium]: https://towardsdatascience.com/jupyter-notebook-extensions-517fa69d2231
+
+Found [a blog post][Jupy Ext Medium] that explains what Jupyter Notebook
+  extension are, and a shortlist of those that would be most helpful
+
+
+[오후 1시 1분]
+
+Jeremy took time to point out that 80% accuracy on a dataset with only two classes
+  is __very__ different than an 80% accuracy on a dataset with __120__ classes
+
+[오후 1시 4분]
+
+@1:33:32 - Jeremy points out that the FastAI library lets you scale up training
+* If you trained on a smaller image, you can scale up and train on a larger image
+  to get further improvements
+  - 10k is a small sample size when it comes to deep learning
+* Switching to bigger images is a nearly obvious way to avoid overfitting.
+  + Fully Convolutional architectures, which VGG-net is __not__, enjoy this property
+
+When your validation loss is lower than your training set score, that means you're
+  underfitting
+* With `cycle_mult=2`, the epoch go in a sequence of 1 -> 2 -> 4 per learning-rate
+  range
+* Training further on the [Kaggle Dog breeds competition](www.kaggle.com/c/dog-breed-identification)
+  didn't prove fruitful because that dataset was so similar to ImageNet (the source architecture)
+  that new weights weren't any different.
+  - Turns out it was actually a subset of ImageNet
+
+- A 2017-recent paper deduced that, if you have an unbalanced dataset, you should
+  basically throw in copies of the rare cases
+
+---
+[오후 1시 16분]
+
+It seems that the students at USF aren't fully satisfied with the hand-waving and
+  "we'll explore that" later, because Jeremy has plans to teach those things later
+  on in the course, but all the papers and material is shared (in brief) when
+  the students ask
+* De-Convolution is covered in Part 2, and glanced at in the lesson 7 of Part 1
+
+We'll be talking a lot about architectures
+* ResNet34 (trained on ImageNet) is a great starting and ending point
+* ResNext50 is stronger, but takes 2-8x longer to train
+  + The model was so much stronger that it was overfitting with `cycle_mult=2`
+  + Using ResNext50 (which was a hilariously short amount of code) it got 99.75%
+    accuracy.
+    - Basically __one__ mistake in 1000. That is state-of-the-art
+  * Also, this context for that notebook makes me appreciate the lack of text in
+    it 지금
+
+
+
+---
+
+[12월 16일]
+
+[오후 6시 4분]
+
+[403 error]: https://github.com/Kaggle/kaggle-api/issues/87
+[Kaggle rules for dog-breed]: https://www.kaggle.com/c/dog-breed-identification/rules
+
+
+I was [struggling with a 403][403 error] in pulling the
+  dog-bread-Classification dataset from Kaggle.
+* Turns out I just needed to [accept the rules][Kaggle rules for dog-breed]
