@@ -198,3 +198,30 @@ We'll be talking a lot about architectures
 I was [struggling with a 403][403 error] in pulling the
   dog-bread-Classification dataset from Kaggle.
 * Turns out I just needed to [accept the rules][Kaggle rules for dog-breed]
+
+Going to spend a second to get the data on my GCP instance, then I'll code along
+  with Jeremy
+
+[오후 6시 14분]
+
+It was really painless.
+
+1. `pip install kaggle` (after `conda activate fastai`)
+2. `kaggle competitions download -c dog-breed-identification`
+3. Unzip the data as desired: `/data/dogbreed/*.zip` for instance
+
+[오후 7시 4분]
+
+I'm taking longer to work through the video/notebook-template than I wanted, but
+  I'm still going through it.
+* Part of it is the notebook's unfriendliness to what __I__ am trying to do
+
+
+---
+
+It ended up being easier to follow along with Jeremy, then introduce my own
+  abstractions (there weren't many necessary) as they arose.
+* It was less noise and made the learning stick, rather than filling ia a
+  prescribed mold.
+  + It makes the knowledge *mine* rather than borrowed (and forgotten) from
+    someone else
