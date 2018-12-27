@@ -225,3 +225,13 @@ It ended up being easier to follow along with Jeremy, then introduce my own
   prescribed mold.
   + It makes the knowledge *mine* rather than borrowed (and forgotten) from
     someone else
+
+---
+[12월 21일]
+
+[오후 5시 2분]
+
+Copy the json of a notebook into https://gist.github.com to get easy publicity
+  of data science notebooks.
+* It's better to have completed project, than just notebooks, but great work needs
+  an audience (else it doesn't matter how big your brain is)
